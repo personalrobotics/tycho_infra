@@ -26,5 +26,4 @@ def get_IK_from_mujoco(sim, current_joint_position,
         next_angles[-1] = np.clip(target_open, CHOPSTICK_CLOSE, CHOPSTICK_OPEN)
     elif target_vector is not None:
         next_angles[-1] = np.clip(target_vector[-1], CHOPSTICK_CLOSE, CHOPSTICK_OPEN)
-
     return next_angles

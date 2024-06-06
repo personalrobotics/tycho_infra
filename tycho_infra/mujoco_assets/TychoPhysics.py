@@ -28,11 +28,13 @@ class TychoPhysics:
             target_quat=target_quat,
             joint_names=np.array(["HEBI/base/X8_9", "HEBI/shoulder/X8_16", "HEBI/elbow/X8_9", "HEBI/wrist1/X5_1", "HEBI/wrist2/X5_1", "HEBI/wrist3/X5_1", "HEBI/chopstick/X5_1"]),
             tol=0.0,
-            regularization_threshold=0.0,
-            regularization_strength=3e-2,
-            max_update_norm=0.004,
+            # regularization_threshold=0.0,
+            regularization_strength=3e-5,
+            max_update_norm=float('inf'),
             max_steps=max_steps,
             inplace=True)
+
+        # print(f"{IK_all_joints.err_norm}\n\r")
 
         return IK_all_joints.qpos[0:7]
     

@@ -181,7 +181,7 @@ def qpos_from_site_pose(physics,
       update_norm = np.linalg.norm(update_joints)
 
       # Check whether we are still making enough progress, and halt if not.
-      if update_norm is not 0.0:
+      if update_norm > 0.0001:
         progress_criterion = err_norm / update_norm
         if progress_criterion > progress_thresh:
           logging.debug('Step %2i: err_norm / update_norm (%3g) > '
