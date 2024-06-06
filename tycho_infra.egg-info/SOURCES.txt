@@ -1,9 +1,0 @@
-setup.py
-tycho_infra.egg-info/PKG-INFO
-tycho_infra.egg-info/SOURCES.txt
-tycho_infra.egg-info/dependency_links.txt
-tycho_infra.egg-info/top_level.txt
-tycho_infra/mujoco_assets/InverseKinematics.py
-tycho_infra/mujoco_assets/MujocoIK.py
-tycho_infra/mujoco_assets/TychoPhysics.py
-tycho_infra/mujoco_assets/__init__.py
